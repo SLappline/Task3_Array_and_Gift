@@ -49,6 +49,6 @@ public class Gift {
 
     @Override
     public String toString() {
-        return "Candy [" + "id = " + id + ", name = " + name + ", weight = " + weight + ", price = " + price + "]";
+        return "name = " + name + ", weight = " + weight + ", price = " + price;
     }
 }

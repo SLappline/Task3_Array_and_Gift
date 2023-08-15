@@ -81,42 +81,42 @@ public class Main {
             String choice = reader.readLine();
             switch (choice) {
                 case "1" -> {
-                    Candy candy = new Candy("Chocolate candy", 10, 10.00);
+                    Candy candy = new Candy("Chocolate candy", 10, 10.00, "Rom");
                     gift.add(candy);
                     totalPrice += candy.getPrice();
                     totalWeight += candy.getWeight();
                     System.out.println("Candy \"Chocolate candy\" added as a gift");
                 }
                 case "2" -> {
-                    Chocolate chocolate = new Chocolate(1, "Alenca", 100, 89.99);
+                    Chocolate chocolate = new Chocolate("Alenca", 100, 89.99, "Belgium");
                     gift.add(chocolate);
                     totalPrice += chocolate.getPrice();
                     totalWeight += chocolate.getWeight();
                     System.out.println("Chocolate \"Alyonka\" added as a gift");
                 }
                 case "3" -> {
-                    Jellybean jellybean = new Jellybean(1, "Apple", 20, 20.2);
+                    Jellybean jellybean = new Jellybean("Apple", 20, 20.2, "weak");
                     gift.add(jellybean);
                     totalPrice += jellybean.getPrice();
                     totalWeight += jellybean.getWeight();
                     System.out.println("Jellybean \"Jellybean apple\" added as a gift");
                 }
                 case "4" -> {
-                    Kinder kinder = new Kinder(1, "Kinder delice", 50, 74.40);
+                    Kinder kinder = new Kinder("Kinder delice", 50, 74.40, "car");
                     gift.add(kinder);
                     totalPrice += kinder.getPrice();
                     totalWeight += kinder.getWeight();
                     System.out.println("Kinder \"Kinder delice\" added as a gift");
                 }
                 case "5" -> {
-                    Macaroon macaroon = new Macaroon(1, "Apple", 80, 99.50);
+                    Macaroon macaroon = new Macaroon("Apple", 80, 99.50, "salted caramel");
                     gift.add(macaroon);
                     totalPrice += macaroon.getPrice();
                     totalWeight += macaroon.getWeight();
                     System.out.println("Macaroon \"Macaroon apple\" added as a gift");
                 }
                 case "6" -> {
-                    Waffles waffles = new Waffles(1, "Cow", 120, 110.90);
+                    Waffles waffles = new Waffles("Cow", 120, 110.90, "square");
                     gift.add(waffles);
                     totalPrice += waffles.getPrice();
                     totalWeight += waffles.getWeight();
@@ -133,7 +133,7 @@ public class Main {
         System.out.println("\nThe gift consists of:");
         for (Gift sweet : gift) {
             count++;
-            System.out.println(count + ". " + sweet.getName());
+            System.out.println(count + ". " + sweet.toString() + "]");
         }
         System.out.printf("\nTotal weight of the gift: %s гр.\nTotal gift price: %.2f руб.%n", totalWeight, totalPrice);
     }
